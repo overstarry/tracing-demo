@@ -28,7 +28,8 @@ func init() {
 			Param: 1,
 		},
 		Reporter: &jaegercfg.ReporterConfig{
-			LogSpans: true,
+			LogSpans:          true,
+			CollectorEndpoint: "http://localhost:14268/api/traces",
 		},
 	}
 	_, err := cfg.InitGlobalTracer(
